@@ -22,32 +22,6 @@ def memoize(f):
 
 @memoize
 def minimax(node, depth, maximizingPlayer, alpha, beta, current_shape, next_shape):
-    # function minimax(node, depth, maximizingPlayer)
-    #     if depth = 0 or node is a terminal node
-    #         return the heuristic value of node
-    #     if maximizingPlayer
-    #         value := −∞
-    #         for each child of node do
-    #             value := max(value, alphabeta(child, depth − 1, α, β, FALSE))
-    #             if α == −∞
-    #                 α := max(α, value)
-    #             else
-    #                 α := max(α, value)
-    #                 if α ≥ β then
-    #                     break (* β cut-off *)
-    #         return value
-
-    #     else
-    #         value := +∞
-    #         for each child of node do
-    #             value := min(value, alphabeta(child, depth − 1, α, β, TRUE))
-    #             if β == +∞
-    #                 β := min(β, value)
-    #             else
-    #                 β := min(β, value)
-    #                 if α ≥ β then
-    #                     break (* α cut-off *)
-    #         return value
 
     # base case
     terminal_state, status = game_over(node)

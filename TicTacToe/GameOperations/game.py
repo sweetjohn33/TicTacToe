@@ -1,7 +1,6 @@
 import numpy as np
+import sys
 from GameOperations.helpers import *
-from GameOperations.player import Player
-from Agent.minimaxplayer import MinMaxPlayer
 
 class GameBoard:
 
@@ -34,15 +33,6 @@ class GameLoop:
     def print_end_game(self):
         print(self.game_board.board)
         if game_over(self.game_board.board)[1] == "tie":
-            print("Game over, it's a tie!")
+            print("TicTacToe over, it's a tie!")
         else:
             print("game over, {}'s won.".format(self.inactive_player.shape))
-
-
-if __name__ == "__main__":
-    board = GameBoard(4)
-    x = MinMaxPlayer("x", "o")
-    #o = MinMaxPlayer("o", "x")
-    o = Player("o")
-    game = GameLoop(x, o, board)
-    game.play()
