@@ -42,6 +42,7 @@ class GameLoop:
 if __name__ == "__main__":
     board = GameBoard(3)
     x = MinMaxPlayer("x", "o")
-    o = MinMaxPlayer("o", "x")
+    #o = MinMaxPlayer("o", "x")
+    o = Player("o")
     game = GameLoop(x, o, board)
     game.play()
