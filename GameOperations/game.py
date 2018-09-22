@@ -40,7 +40,7 @@ class GameLoop:
 
 
 if __name__ == "__main__":
-    board = GameBoard(3)
+    board = GameBoard(4)
     x = MinMaxPlayer("x", "o")
     #o = MinMaxPlayer("o", "x")
     o = Player("o")
